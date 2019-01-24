@@ -1,0 +1,3 @@
+#多数据源配置的起始点
+org.springframework.context.ApplicationListener=\
+  com.zhey.multidatasource.MultiDatasourceListener
