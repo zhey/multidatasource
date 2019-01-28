@@ -23,6 +23,16 @@ multi:
       maxWait: 100
       minIdel: 10
       validationQuery: select 2
+  tomcat:
+    other:
+      url:
+      username: 
+      password: 
+      driver-class-name: 
+      max-active: 
+      max-idel: 
+      minIdel: 
+      validationQuery: 
   transactionManager:
     userdruid: transactionManager
     agedruid: transactionManagerAge
