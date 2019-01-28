@@ -72,7 +72,7 @@ public class MultiMybatisLoader {
                     if (dataSource == null) {
                         throw new Exception();
                     }
-                    builder.addPropertyValue("datasource", dataSource);
+                    builder.addPropertyValue("dataSource", dataSource);
                     builder.addPropertyValue("mapperLocations",
                             properties.getMybatis().get(key).resolveMapperLocations());
                     builder.addPropertyValue("typeAliasesPackage", properties.getMybatis().get(key).getTypeAliasesPackage());
@@ -137,7 +137,7 @@ public class MultiMybatisLoader {
                         (DefaultListableBeanFactory) ((ConfigurableApplicationContext) applicationContext).getBeanFactory();
                 for (String key : properties.getMybatis().keySet()) {
                     ClassPathMapperScanner scanner = new ClassPathMapperScanner(factory);
-                    scanner.setSqlSessionFactoryBeanName(key + "sqlSessionTemplate");
+                    scanner.setSqlSessionTemplateBeanName(key + "sqlSessionTemplate");
                     scanner.setAnnotationClass(Mapper.class);
                     scanner.registerFilters();
                     scanner.doScan(org.springframework.util.StringUtils.toStringArray(properties.getMybatis().get(key).getBasePackage()));

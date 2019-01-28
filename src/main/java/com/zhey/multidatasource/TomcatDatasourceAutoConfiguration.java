@@ -27,7 +27,7 @@ import org.springframework.context.ConfigurableApplicationContext;
 public class TomcatDatasourceAutoConfiguration extends BaseDatasourceAutoConfiguration {
     @Override
     void createDatasource() throws Exception {
-        String primaryDatasource = properties.getPrimary().get("createDatasource");
+        String primaryDatasource = properties.getPrimary().get("datasource");
         if (StringUtils.isEmpty(primaryDatasource)) {
             throw new Exception("未配置主数据源");
         } else {
