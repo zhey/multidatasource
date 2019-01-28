@@ -25,6 +25,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.config.BeanDefinition;
 import org.springframework.beans.factory.support.BeanDefinitionBuilder;
 import org.springframework.beans.factory.support.DefaultListableBeanFactory;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ConfigurableApplicationContext;
 
@@ -34,6 +35,7 @@ import javax.sql.DataSource;
 /**
  * @author zhey
  */
+@ConditionalOnClass(SqlSessionFactoryBean.class)
 public class MultiMybatisLoader {
     @Autowired
     private ApplicationContext applicationContext;
