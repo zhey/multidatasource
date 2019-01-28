@@ -5,7 +5,7 @@ import org.springframework.context.ApplicationContext;
 /**
  * @author zhey
  */
-public interface MultiDatasourceAutoConfigurationInterface {
+public interface DatasourceAutoConfiguration {
     void setApplicationContext(ApplicationContext applicationContext);
 
     void setProperties(MultiDatasourceProperties properties);

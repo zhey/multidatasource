@@ -5,7 +5,7 @@ import org.springframework.context.ApplicationContext;
 /**
  * @author zhey
  */
-public abstract class BaseMultiDatasourceAutoConfiguration implements MultiDatasourceAutoConfigurationInterface {
+public abstract class BaseDatasourceAutoConfiguration implements DatasourceAutoConfiguration {
     protected ApplicationContext applicationContext;
     protected MultiDatasourceProperties properties;
 
@@ -30,11 +30,11 @@ public abstract class BaseMultiDatasourceAutoConfiguration implements MultiDatas
     @Override
     public void init() {
         try {
-            datasource();
+            createDatasource();
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
-    abstract void datasource() throws Exception;
+    abstract void createDatasource() throws Exception;
 }
