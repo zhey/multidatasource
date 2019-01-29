@@ -6,7 +6,7 @@ multi:
     userdruid:
       url:
       username: root
-      passowrd: root
+      password: root
       driver-class-name: com.mysql.jdbc.Driver
       initialSize: 10
       maxActive: 100
@@ -16,7 +16,7 @@ multi:
     agedruid:
       url:
       username: root
-      passowrd: root
+      password: root
       driver-class-name: com.mysql.jdbc.Driver
       initialSize: 10
       maxActive: 100
